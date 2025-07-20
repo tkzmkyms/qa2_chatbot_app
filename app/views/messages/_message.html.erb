@@ -1,0 +1,6 @@
+<div class="<%= message.sender == 'user' ? 'text-right' : 'text-left' %>">
+  <div class="inline-block px-4 py-2 rounded-xl
+              <%= message.sender == 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black' %>">
+    <%= message.content %>
+  </div>
+</div>

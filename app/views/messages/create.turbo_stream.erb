@@ -1,0 +1,3 @@
+<%= turbo_stream.append "chat-box", partial: "messages/message", locals: { message: @message } %>
+<%= turbo_stream.append "chat-box", partial: "messages/message", locals: { message: @bot_message } %>
+<%= turbo_stream.replace "message_content", partial: "messages/form", locals: { message: Message.new } %>
