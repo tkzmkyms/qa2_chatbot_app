@@ -20,15 +20,7 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  host: your-db-host.render.com
-  database: qa2_chatbot_app_production
-  username: your_db_username
-  password: your_db_password
+  url: <%= ENV['DATABASE_URL'] %>
 
 cable:
-    adapter: postgresql
-    database: qa2_chatbot_app_cable
-    username: your_db_username
-    password: your_db_password
-    host: your-db-host.render.com
+  url: <%= ENV['DATABASE_URL'] %>
