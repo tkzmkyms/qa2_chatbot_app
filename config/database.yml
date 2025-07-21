@@ -1,34 +1,24 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: qa2_chatbot_app_development
+  adapter: mysql2
   username: root
   password:
   host: localhost
+  database: qa2_chatbot_app_development
 
 test:
   <<: *default
-  database: qa2_chatbot_app_test
+  adapter: mysql2
   username: root
   password:
   host: localhost
+  database: qa2_chatbot_app_test
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-
-cable:
-  <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-
-queue:
-  <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-
-solid_cache:
-  <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
