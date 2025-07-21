@@ -25,13 +25,13 @@ Rails.application.configure do
   config.silence_healthcheck_path = "/up"
 
   # ✅ SolidCache を無効化（原因の回避）
-  config.cache_store = :memory_store
+  # config.cache_store = :memory_store
 
   # ✅ ActiveJob（solid_queue を使っていれば OK）
-  config.active_job.queue_adapter = :solid_queue
-  config.solid_queue.connects_to = {
-    database: { writing: :queue }
-  }
+  # config.active_job.queue_adapter = :solid_queue
+  # config.solid_queue.connects_to = {
+  # database: { writing: :queue }
+  # }
 
   config.action_mailer.default_url_options = { host: "example.com" }
 
