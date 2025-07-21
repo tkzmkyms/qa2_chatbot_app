@@ -5,25 +5,23 @@ default: &default
 
 development:
   <<: *default
-  database: qa2_chatbot_app_development
-  username: root
-  password:
-  host: localhost
+  database: furima42061
+  username: furima42061_user
+  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
+  host: dpg-d1rod6ur433s73aj7ot0-a
+  port: 5432
 
 test:
-  <<: *default
-  database: qa2_chatbot_app_test
-  username: root
-  password:
-  host: localhost
-
-production:
   <<: *default
   database: furima42061
   username: furima42061_user
   password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
   host: dpg-d1rod6ur433s73aj7ot0-a
   port: 5432
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
 
 cable:
   <<: *default
