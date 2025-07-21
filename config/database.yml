@@ -1,23 +1,21 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
 
 development:
   <<: *default
-  database: furima42061
-  username: furima42061_user
-  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
-  host: dpg-d1rod6ur433s73aj7ot0-a
-  port: 5432
+  database: qa2_chatbot_app_development
+  username: root
+  password:
+  host: localhost
 
 test:
   <<: *default
-  database: furima42061
-  username: furima42061_user
-  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
-  host: dpg-d1rod6ur433s73aj7ot0-a
-  port: 5432
+  database: qa2_chatbot_app_test
+  username: root
+  password:
+  host: localhost
 
 production:
   <<: *default
@@ -25,16 +23,12 @@ production:
 
 cable:
   <<: *default
-  database: furima42061
-  username: furima42061_user
-  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
-  host: dpg-d1rod6ur433s73aj7ot0-a
-  port: 5432
+  url: <%= ENV["DATABASE_URL"] %>
 
 queue:
   <<: *default
-  database: furima42061
-  username: furima42061_user
-  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
-  host: dpg-d1rod6ur433s73aj7ot0-a
-  port: 5432
+  url: <%= ENV["DATABASE_URL"] %>
+
+solid_cache:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
