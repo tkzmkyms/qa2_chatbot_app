@@ -1,0 +1,19 @@
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+/Users/shimabus_mac/.rbenv/versions/3.2.0/bin/ruby -I /Users/shimabus_mac/.rbenv/versions/3.2.0/lib/ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-5u19li sitelibdir\=./.gem.20250721-34335-5u19li clean
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-5u19li sitelibdir\=./.gem.20250721-34335-5u19li
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-5u19li sitelibdir\=./.gem.20250721-34335-5u19li install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20250721-34335-5u19li
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-5u19li sitelibdir\=./.gem.20250721-34335-5u19li clean

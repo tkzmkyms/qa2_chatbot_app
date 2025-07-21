@@ -1,0 +1,20 @@
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+/Users/shimabus_mac/.rbenv/versions/3.2.0/bin/ruby -I /Users/shimabus_mac/.rbenv/versions/3.2.0/lib/ruby/3.2.0 extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-z3hwd4 sitelibdir\=./.gem.20250721-34335-z3hwd4 clean
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-z3hwd4 sitelibdir\=./.gem.20250721-34335-z3hwd4
+compiling escape.c
+linking shared-object erb/escape.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-z3hwd4 sitelibdir\=./.gem.20250721-34335-z3hwd4 install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20250721-34335-z3hwd4/erb
+
+current directory: /Users/shimabus_mac/projects/qa2_chatbot_app/vendor/bundle/ruby/3.2.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250721-34335-z3hwd4 sitelibdir\=./.gem.20250721-34335-z3hwd4 clean
