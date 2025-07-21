@@ -1,3 +1,5 @@
+# config/environments/test.rb
+
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
@@ -11,9 +13,8 @@ Rails.application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = true
 
-  # ✅ SolidCacheの正しい設定
+  # ✅ SolidCache を使う（ActiveRecordバックエンドが自動）
   config.cache_store = :solid_cache_store
-  config.solid_cache.store = :active_record # Redisなら :redis などに変更
 
   config.action_dispatch.show_exceptions = false
   config.action_controller.allow_forgery_protection = false
