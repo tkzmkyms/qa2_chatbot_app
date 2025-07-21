@@ -1,26 +1,42 @@
 default: &default
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  adapter: mysql2
+  database: qa2_chatbot_app_development
   username: root
   password:
   host: localhost
-  database: qa2_chatbot_app_development
 
 test:
   <<: *default
-  adapter: mysql2
+  database: qa2_chatbot_app_test
   username: root
   password:
   host: localhost
-  database: qa2_chatbot_app_test
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: furima42061
+  username: furima42061_user
+  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
+  host: dpg-d1rod6ur433s73aj7ot0-a
+  port: 5432
 
 cable:
-  url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: furima42061
+  username: furima42061_user
+  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
+  host: dpg-d1rod6ur433s73aj7ot0-a
+  port: 5432
+
+queue:
+  <<: *default
+  database: furima42061
+  username: furima42061_user
+  password: hZJWfaa1yf9rJ4TkXdLe5YYpHovIFfVp
+  host: dpg-d1rod6ur433s73aj7ot0-a
+  port: 5432
