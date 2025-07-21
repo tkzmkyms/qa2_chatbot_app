@@ -21,7 +21,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  host: your-db-host.render.com
   database: qa2_chatbot_app_production
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: your_db_username
+  password: your_db_password
